@@ -19,7 +19,7 @@ loopExterno: while (true) {
 
   loopInterno1: while (sumRounds < rounds) {
     sumRounds++;
-    const jogadas = ["PEDRA", "PAPEL", "TESOURA"];
+    const plays = ["PEDRA", "PAPEL", "TESOURA"];
 
     let computer = Math.round(Math.random() * 2);
 
@@ -33,9 +33,9 @@ Escolha sua jogada:
     let play = "";
 
     loopInterno2: while (true) {
-      play = +prompt(`Qual a sua jogada ${namePlayer}? `);
+      play = +prompt(`${namePlayer}, qual a sua jogada? `);
       if (play !== 0 && play !== 1 && play !== 2) {
-        console.log("Opção inválida, digite 0, 1 ou 2!");
+        console.log(`${play} é inválido, digite '0','1' ou '2'!`);
       } else {
         break;
       }
@@ -43,8 +43,8 @@ Escolha sua jogada:
 
     console.log();
 
-    console.log(`O computador jogou ${jogadas[computer]}`);
-    console.log(`${namePlayer} jogou ${jogadas[play]}`);
+    console.log(`O computador jogou ${plays[computer]}`);
+    console.log(`${namePlayer} jogou ${plays[play]}`);
 
     if (computer == 0) {
       if (play == 0) {
@@ -119,7 +119,7 @@ Jogo EMPATADO!`);
       `${namePlayer}, deseja jogar novamente? S/N: `
     ).toUpperCase();
     if (playAgain !== "S" && playAgain !== "N") {
-      console.log("Opção inválida, digite S ou N!");
+      console.log(`${playAgain} é inválido, digite 'S' ou 'N'!`);
     }
   }
 
