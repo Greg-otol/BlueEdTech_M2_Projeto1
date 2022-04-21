@@ -2,37 +2,49 @@ const prompt = require("prompt-sync")();
 
 let namePlayer = prompt("Qual o seu nome? ");
 
-console.log(`
+loopExterno: while (true) {
+  console.log(`
 Jokenpô - Pedra, papel e tesoura.
 >>>>> ATENÇÃO! <<<<<
 Digite 0 para PEDRA
 Digite 1 para PAPEL
 Digite 2 para TESOURA
-        `);
+`);
 
-loopExterno: while (true) {
-  let rounds = +prompt(`Olá ${namePlayer}, quantas rodadas quer jogar? `);
+  let rounds = "";
+
+  function promptRouds() {
+    while (true) {
+      rounds = +prompt(`Olá ${namePlayer}, quantas rodadas quer jogar? `);
+      if (!isNaN(rounds)) return rounds;
+      console.log(`Resposta inválida, digite apenas números!`);
+    }
+  }
+
+  promptRouds();
+
   let sumRounds = 0;
   let playerSum = 0;
   let computerSum = 0;
   let tiedSum = 0;
 
-  loopInterno1: while (sumRounds < rounds) {
+  for (let i = 0; i < rounds; i++) {
     sumRounds++;
+
     const plays = ["PEDRA", "PAPEL", "TESOURA"];
 
-    let computer = Math.round(Math.random() * 2);
+    let computer = Math.floor(Math.random() * plays.length);
 
     console.log(`
 Escolha sua jogada:
 [0] PEDRA
 [1] PAPEL
 [2] TESOURA
-        `);
+    `);
 
     let play = "";
 
-    loopInterno2: while (true) {
+    loopInterno1: while (true) {
       play = +prompt(`${namePlayer}, qual a sua jogada? `);
       if (play !== 0 && play !== 1 && play !== 2) {
         console.log(`${play} é inválido, digite '0','1' ou '2'!`);
@@ -46,39 +58,23 @@ Escolha sua jogada:
     console.log(`O computador jogou ${plays[computer]}`);
     console.log(`${namePlayer} jogou ${plays[play]}`);
 
-    if (computer == 0) {
-      if (play == 0) {
-        tiedSum++;
-        console.log(`A ${sumRounds}ª rodada deu Empate`);
-      } else if (play == 1) {
-        playerSum++;
-        console.log(`${namePlayer} venceu a ${sumRounds}ª rodada!`);
-      } else if (play == 2) {
-        computerSum++;
-        console.log(`O computador venceu a ${sumRounds}ª rodada!`);
-      }
-    } else if (computer == 1) {
-      if (play == 0) {
-        computerSum++;
-        console.log(`O computador venceu a ${sumRounds}ª rodada!`);
-      } else if (play == 1) {
-        tiedSum++;
-        console.log(`A ${sumRounds}ª rodada deu Empate`);
-      } else if (play == 2) {
-        playerSum++;
-        console.log(`${namePlayer} venceu a ${sumRounds}ª rodada!`);
-      }
-    } else if (computer == 2) {
-      if (play == 0) {
-        playerSum++;
-        console.log(`${namePlayer} venceu a ${sumRounds}ª rodada!`);
-      } else if (play == 1) {
-        computerSum++;
-        console.log(`O computador venceu a ${sumRounds}ª rodada!`);
-      } else if (play == 2) {
-        tiedSum++;
-        console.log(`A ${sumRounds}ª rodada deu Empate`);
-      }
+    if (
+      (computer == 0 && play == 0) ||
+      (computer == 1 && play == 1) ||
+      (computer == 2 && play == 2)
+    ) {
+      tiedSum++;
+      console.log(`A ${sumRounds}ª rodada deu Empate`);
+    } else if (
+      (computer == 0 && play == 1) ||
+      (computer == 1 && play == 2) ||
+      (computer == 2 && play == 0)
+    ) {
+      playerSum++;
+      console.log(`${namePlayer} venceu a ${sumRounds}ª rodada!`);
+    } else {
+      computerSum++;
+      console.log(`O computador venceu a ${sumRounds}ª rodada!`);
     }
   }
 
@@ -114,7 +110,7 @@ Jogo EMPATADO!`);
 
   let playAgain = "";
 
-  loopInterno3: while (playAgain !== "S" && playAgain !== "N") {
+  loopInterno2: while (playAgain !== "S" && playAgain !== "N") {
     playAgain = prompt(
       `${namePlayer}, deseja jogar novamente? S/N: `
     ).toUpperCase();
@@ -126,6 +122,9 @@ Jogo EMPATADO!`);
   if (playAgain === "S") {
     continue;
   } else {
+    console.clear();
+    console.log();
+    console.log("Jogo encerrado.");
     break;
   }
 }
