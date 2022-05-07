@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+header {
+  background-image: url("https://i.ytimg.com/vi/1naZOt8LU6Y/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 10%;
+  background-position-y: 100%;
+}
+h1 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  padding-top: 10rem;
+  padding-right: 4rem;
+  padding-left: 1rem;
+
+  color: #0e7549;
+  font-size: 64px;
+  text-shadow: 0.1rem 0.1rem #94f7cc;
+}
+
+section#info {
+  background-color: #3ac287;
+
+  display: flex;
+  justify-content: center;
+  width: 91%;
+  align-items: center;
+  text-align: center;
+
+  color: rgb(207, 206, 218);
+
+  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;
+}
+
+section#info div#txt {
+  color: #0e7549;
+  text-shadow: 0.1rem 0.1rem #94f7cc;
+}
+
+section#info div#txt h2 {
+  text-align: center;
+  padding: 3rem;
+  padding-left: 2rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+section#info div#txt h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem;
+  padding-top: 0.4rem;
+}
+
+section#info div#img img {
+  border-radius: 2rem;
+  width: 45rem;
+  padding: 3rem;
+}
+
+section#info div#txt button {
+  padding: 1rem;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  background-color: #0e7549;
+  border: 1px solid rgb(195, 195, 214);
+  text-shadow: 0.1rem 0.1rem #0e7549;
+  border-radius: 1rem;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  color: #288b60;
+  text-shadow: 0.02rem 0.02rem #94f7cc;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+div#txt {
+  width: 25rem;
+  box-shadow: 5px 5px 5px 5px #00000035;
+  padding: 1rem;
+  align-items: center;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: #0e7549;
+  padding: 2rem;
+  text-align: center;
+}
