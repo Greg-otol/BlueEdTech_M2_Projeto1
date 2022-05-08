@@ -155,7 +155,7 @@ img {
     font-size: 2rem;
   }
   button {
-    position:absolute; top: 28rem; left: 5rem;
+    position:absolute; top: 30rem; left: 5rem;
   }
   body {
     margin: 0;
@@ -187,7 +187,7 @@ img {
     float: inline-end;
     width: 100%;
     padding: 2rem;
-    position:absolute; top: 34rem; left: 0.5rem;
+    position:absolute; top: 35rem; left: 0.5rem;
   }
 }
 html,
