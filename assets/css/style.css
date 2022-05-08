@@ -141,7 +141,7 @@ img {
     padding-top: 3rem;
     float: left;
     width: 20rem;
-    height: 20rem;
+    height: 16rem;
     box-shadow: 5px 5px 5px 5px #00000035;
   
     align-items: center;
@@ -155,7 +155,7 @@ img {
     font-size: 2rem;
   }
   button {
-    position:absolute; top: 30rem; left: 5rem;
+    position:absolute; top: 26rem; left: 5rem;
   }
   body {
     margin: 0;
@@ -172,10 +172,10 @@ img {
   }
   header {
     width: 100%;
-    padding: 3rem;
+    padding: 1rem;
   }
   header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: left;
   }
   body {
