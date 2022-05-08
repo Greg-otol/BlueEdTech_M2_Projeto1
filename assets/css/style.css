@@ -98,10 +98,10 @@ div#txt {
   align-items: center;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 footer {
   background-color: #0e7549;
