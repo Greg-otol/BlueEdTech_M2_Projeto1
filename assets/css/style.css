@@ -13,9 +13,8 @@ header {
 }
 h1 {
   display: flex;
-  height: 50px;
-  width: 100%;
-  display: flex;
+  justify-content: left;
+  
   align-items: center;
 
   padding: 1rem;
@@ -98,10 +97,10 @@ div#txt {
   align-items: center;
 }
 
-/* html,
+html,
 body {
   overflow-x: hidden;
-} */
+}
 
 footer {
   background-color: #0e7549;
