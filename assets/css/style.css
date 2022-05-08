@@ -4,6 +4,7 @@
 }
 
 body {
+  
   background-color: #3ac287;
 }
 
@@ -136,7 +137,7 @@ img {
   }
   section#img {
     float: inline-end;
-    width: 95%;
+    width: 60%;
     padding: 1rem;
   }
   section#info {
@@ -145,7 +146,7 @@ img {
     width: 20rem;
     height: 16rem;
     box-shadow: 5px 5px 5px 5px #00000035;
-    position:absolute; top: rem; left: 1.2rem;
+    position:absolute; top: 5rem; left: 1.2rem;
     align-items: center;
     text-align: center;
     font-size: 1rem;
@@ -188,9 +189,9 @@ img {
 @media screen and (max-width: 425px) {
   section#img {
     float: inline-end;
-    width: 100%;
+    width: 170%;
     padding: 2rem;
-    position:absolute; top: 25rem; left: 0.25rem;
+    position:absolute; top: 13rem; left: -38rem;
   }
 }
 html,
