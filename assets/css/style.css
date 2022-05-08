@@ -45,26 +45,26 @@ h2 {
 
 h3 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 1rem;
+  padding-top: 5rem;
   color: #0e7549;
   text-shadow: 0.1rem 0.1rem #94f7cc;
 }
 
 button {
   padding: 1rem;
-  position:absolute; top: 30rem; left: 14rem;
+  position:absolute; top: 35rem; left: 10rem;
 
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 
   background-color: #0e7549;
-  border: 1px solid rgb(195, 195, 214);
+  border: 0.05rem solid #94f7cc;
   text-shadow: 0.1rem 0.1rem #0e7549;
   border-radius: 1rem;
   transition: all 0.5s ease-out;
   cursor: pointer;
-  color: #288b60;
-  text-shadow: 0.02rem 0.02rem #94f7cc;
+  color: #33b97f;
 }
 button:hover {
   transform: scale(1.1);
@@ -76,12 +76,14 @@ button:hover {
 
 img {
   width: 80%;
+  border-radius: 1rem;
 }
 
 .rodape {
   background-color: #0e7549;
   padding: 2rem;
   text-align: center;
+  color: #33b97f;
 }
 .divrodape {
   margin: 400px 0 0 0;
@@ -125,4 +127,8 @@ img {
   body {
     margin: 0;
   }
+}
+html,
+body {
+  overflow-x: hidden;
 }
