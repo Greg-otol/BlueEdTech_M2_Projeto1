@@ -20,7 +20,7 @@ body {
     position: absolute; top: 0;
     width: 100%;
     text-align: center;
-    color: rgb(230, 230, 230);
+    color: white;
     font-size: 2rem;
     text-shadow: 0.1rem 0.1rem #434343;
 }
@@ -86,5 +86,11 @@ img#image {
     .top {
         padding: 0.8rem;
         font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    img#image {
+        width: 88%;
     }
 }
