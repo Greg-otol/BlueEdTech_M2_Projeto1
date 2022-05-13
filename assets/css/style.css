@@ -87,3 +87,15 @@ img#image {
     font-size: 1.8rem;
   }
 }
+
+@media screen and (max-width: 436px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+}
