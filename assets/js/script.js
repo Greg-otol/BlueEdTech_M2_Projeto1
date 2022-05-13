@@ -1,26 +1,26 @@
-const elementoNome = document.getElementById("name");
-const elementoSituacao = document.querySelector("#situation");
-const elementoImg = document.querySelector("#image");
-let elementoBtn = document.querySelector("#replace");
+const elementName = document.getElementById("name");
+const elementSituation = document.querySelector("#situation");
+const elementImage = document.querySelector("#image");
+let elementBtn = document.querySelector("#replace");
 
-elementoBtn.addEventListener("click", () => {
-  if (elementoBtn.value == "primeiro") {
-    elementoImg.src =
+elementBtn.addEventListener("click", () => {
+  if (elementBtn.value == "first") {
+    elementImage.src =
       "./assets/img/friagem.png";
-    elementoNome.innerText = "Ben 10";
-    elementoSituacao.innerText = "Friagem";
-    elementoBtn.value = "segundo";
-  } else if (elementoBtn.value == "segundo") {
-    elementoImg.src =
+    elementName.innerText = "Friagem";
+    elementSituation.innerText = "Alien - Humanoide";
+    elementBtn.value = "second";
+  } else if (elementBtn.value == "second") {
+    elementImage.src =
       "./assets/img/feedback.png";
-    elementoNome.innerText = "Ben 10";
-    elementoSituacao.innerText = "Feedback";
-    elementoBtn.value = "terceiro";
+    elementName.innerText = "Feedback";
+    elementSituation.innerText = "Alien - Elétrico";
+    elementBtn.value = "Third";
   } else {
-    elementoImg.src =
+    elementImage.src =
       "./assets/img/humano.png";
-    elementoNome.innerText = "Ben 10";
-    elementoSituacao.innerText = "Humano";
-    elementoBtn.value = "primeiro";
+    elementName.innerText = "Ben 10";
+    elementSituation.innerText = "Humano";
+    elementBtn.value = "first";
   }
 });
