@@ -1,5 +1,3 @@
 # Módulo 2 - BlueEdTech
 
-Para executar o projeto no VScode, instale a dependência que está no package.json.
-
-npm install prompt-sync
+Projeto 1 - Jogo da Troca
