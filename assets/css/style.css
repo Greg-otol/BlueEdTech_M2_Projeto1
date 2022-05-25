@@ -3,44 +3,55 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: white;
 }
 
-.logo {
-  background: #4bb184;
-  padding: 1rem;
-  font-size: 1.5rem;
-  color: white;
-  text-shadow: 0.1rem 0.1rem #434343;
-  text-align: center;
-}
-
-.imgtopo {
-  width: 100%;
-  margin-bottom: -0.3rem;
-}
-
-.main {
-  padding: 1rem;
-  background: #90e7c4;
-}
-
-.row {
+body,
+html {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: rgb(175, 245, 245);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+header {
+  display: flex;
+}
+
+header img {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  text-shadow: 0.1rem 0.1rem #434343;
-  font-size: 1.8rem;
-  box-shadow: 5px 5px 5px 5px #00000035;
-  width: 100%;
   padding: 1rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  box-shadow: 5px 5px 5px 5px #00000035;
+  text-shadow: 0.1rem 0.1rem #434343;
+  font-size: 1rem;
+}
+
+.container img {
+  width: 80%;
   border-radius: 1rem;
 }
 
 h2 {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 h3 {
@@ -48,12 +59,12 @@ h3 {
 }
 
 button {
-  padding: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   font-size: 1rem;
-  background-color: #4bb184;
+  background-color: #166c47;
   border: 0.05rem solid white;
   text-shadow: 0.1rem 0.1rem #4bb184;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   transition: all 0.5s ease-out;
   cursor: pointer;
   color: white;
@@ -65,43 +76,43 @@ button:hover {
   transform: scale(1.1);
 }
 
-img#image {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.divrodape {
-  background: #4bb184;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #166c47;
   padding: 2rem;
+  margin: 0;
   text-align: center;
+  margin-top: auto;
 }
 
-@media screen and (max-width: 515px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.8rem;
+footer h4 {
+  margin-right: 2rem;
+}
+
+footer img {
+  width: 2rem;
+  margin: 0.2rem;
+}
+
+@media screen and (min-width: 280px) {
+  footer {
+    font-size: 0.7rem;
   }
 }
 
-@media screen and (max-width: 436px) {
-  .logo {
-    padding: 0.5rem;
-  }
-  h1 {
-    font-size: 2rem;
-  }
+@media screen and (max-width: 375px) {
   h2 {
-    font-size: 1.7rem;
-  }
-  h3 {
     font-size: 1.3rem;
   }
-  .divrodape {
-    padding: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container img {
+    width: 60%;
   }
 }
