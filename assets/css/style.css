@@ -37,12 +37,12 @@ header img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
   padding: 1rem;
+  margin: 1rem auto;
   border-radius: 1rem;
-  margin: 2rem;
   box-shadow: 5px 5px 5px 5px #00000035;
   text-shadow: 0.1rem 0.1rem #434343;
-  font-size: 1rem;
 }
 
 .container img {
@@ -52,10 +52,12 @@ header img {
 
 h2 {
   padding-bottom: 0.5rem;
+  font-size: min(3rem, 5vw);
 }
 
 h3 {
   padding: 0.5rem;
+  font-size: min(2.5rem, 5vw);
 }
 
 button {
@@ -89,6 +91,7 @@ footer {
 
 footer h4 {
   margin-right: 2rem;
+  font-size: min(1rem, 3vw);
 }
 
 footer img {
@@ -96,20 +99,28 @@ footer img {
   margin: 0.2rem;
 }
 
-@media screen and (min-width: 280px) {
-  footer {
+@media screen and (max-width: 280px) {
+  /* footer {
+    flex-direction: column;
     font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+  footer img {
+    width: 20%;
+  } */
+  h3 {
+    font-size: 0.8rem;
   }
 }
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   h2 {
     font-size: 1.3rem;
   }
   h3 {
     font-size: 1rem;
   }
-}
+} */
 
 @media screen and (min-width: 800px) {
   .container img {
